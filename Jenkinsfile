@@ -7,8 +7,8 @@ pipeline {
       steps {
         echo 'hello'
         script {
-          def newVersion = getSha1AsVersion()
-          echo 'sha1AsVersion=$newVersion'
+          def sha1AsVersion = getSha1AsVersion()
+          echo 'sha1AsVersion=' + sha1AsVersion
         }
       }
     }
