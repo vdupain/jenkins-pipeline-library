@@ -6,8 +6,10 @@ pipeline {
     stage('test') {
       steps {
         echo 'hello'
-        def newVersion = getNewVersion()
-        echo 'sha1AsVersion=$newVersion'
+        script {
+          def newVersion = getNewVersion()
+          echo 'sha1AsVersion=$newVersion'
+        }
       }
     }
   }
